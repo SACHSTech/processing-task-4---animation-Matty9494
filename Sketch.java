@@ -1,122 +1,137 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
+
+  double randomx = random(-width, width);
+  double randomy = random(-50, 50);
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+  // Called once at the beginning of execution. Size Is Set
   public void settings() {
-	// put your size call here
+
+	// Size Of House Picture
     size(400, 400);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
+  // Called once at the beginning of execution. Background Of House Is Set
   public void setup() {
-    background(210, 255, 173);
+    background(51, 153, 255);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+  // Drawing The House
   public void draw() {
 	  
+	  // Sun
+    fill(255, 255, 0);
+    ellipse((float) ((width/8) - randomx), (float) ((height/8) - randomy), width/5, height/5);
 
-  
+    // Hill
+    fill(0, 153, 0);
+    ellipse((float) (width/1.21), (float) (height/1.14), width/2, height/2);
 
-    //sun 
-    fill(225, 225, 0);
-    ellipse(50, 50, 80, 80);
+    // Hill
+    fill(0, 153, 0);
+    ellipse(width/4, (float) (height/1.08), width/2, height/2);
 
-    //cloud
+    // Hill
+    fill(0, 153, 0);
+    ellipse((float) (width/13.33), (float) (height/1.05), width/2, height/2);
+
+    // Hill
+    fill(0, 153, 0);
+    ellipse((float) (width/1.08), (float) (height/1.05), width/2, height/2);
+
+    // Grass
+    fill(102, 255, 102);
+    rect(0, (float) (height/1.18), width/1, height/1);
+
+    // Cloud
     fill(255, 255, 255);
-    ellipse(190, 37, 140, 40);
+    ellipse((float) ((width/1.66) - randomx), (float) ((height/13.33) - randomy), (float) (width/2.86), height/10);
 
-    //cloud
+    // Cloud
     fill(255, 255, 255);
-    ellipse(290, 40, 140, 40);
+    ellipse((float) ((width/1.38) - randomx), (float) ((height/10) - randomy), (float) (width/2.86), height/10);
 
-    //house
+    // Cloud
+    fill(255, 255, 255);
+    ellipse((float) ((width/2.11) - randomx), (float) ((height/10.81) - randomy), (float) (width/2.86), height/10);
+
+    // House Bricks
     fill(255, 204, 51);
-    rect(100, 155, 200, 200);
+    rect(width/4, (float) (height/2.58), width/2, height/2);
 
-    //windows
-    fill(255, 255, 255);
-    rect(110, 280, 50, 50);
-
-      // Window
-    fill(255, 255, 255);
-    rect(238, 280, 50, 50);
-
-    // Window Roof
-    fill(51, 0, 0);
-    rect(233, 280, 60, 5);
+    // Door
+    fill(153, 102, 0);
+    rect((float) (width/2.29), (float) (height/1.43), width/8, (float) (height/5.33));
 
     // Window
     fill(255, 255, 255);
-    rect(112, 200, 75, 50);
+    rect((float) (width/3.57), (float) (height/1.43), width/8, height/8);
 
     // Window Roof
     fill(51, 0, 0);
-    rect(107, 200, 85, 5);
+    rect((float) (width/3.74), (float) (height/1.43), (float) (width/6.66), height/80);
 
     // Window
     fill(255, 255, 255);
-    rect(213, 200, 75, 50);
+    rect((float) (width/1.68), (float) (height/1.43), width/8, height/8);
 
     // Window Roof
     fill(51, 0, 0);
-    rect(208, 200, 85, 5);
+    rect((float) (width/1.72), (float) (height/1.43), (float) (width/6.66), height/80);
+
+    // Window
+    fill(255, 255, 255);
+    rect((float) (width/3.57), height/2, (float) (width/5.33), height/8);
+
+    // Window Roof
+    fill(51, 0, 0);
+    rect((float) (width/3.74), height/2, (float) (width/4.70), height/80);
+
+    // Window
+    fill(255, 255, 255);
+    rect((float) (width/1.88), height/2, (float) (width/5.33), height/8);
+
+    // Window Roof
+    fill(51, 0, 0);
+    rect((float) (width/1.92), height/2, (float) (width/4.71), height/80);
 
     // Door Handle
     fill(255, 204, 0);
-    ellipse(215, 315, 10, 10);
+    ellipse((float) (width/1.86), (float) (height/1.27), width/40, height/40);
 
     // House Chimny
     fill(255, 204, 51);
-    rect(250, 80, 25, 70);
+    rect((float) (width/1.60), height/5, width/16, (float) (height/5.71));
 
     // Chimny Exit
     fill(51, 0, 0);
-    rect(245, 80, 35, 5);
+    rect((float) (width/1.63), height/5, (float) (width/11.4), height/80);
 
     // House Roof
     fill(51, 0, 0);
-    triangle(200, 75, 325, 175, 75, 175);
+    triangle(width/2, (float) (height/5.33), (float) (width/1.23), (float) (height/2.29), (float) (width/5.33), (float) (height/2.29));
 
     // Tree Leaves
     fill(0, 102, 0);
-    ellipse(65, 220, 100, 100);
+    ellipse((float) (width/6.15), (float) (height/1.82), width/4, height/4);
 
     // Tree Trunk
     fill(102, 51, 0);
-    rect(55, 270, 20, 100);
-
-   // Bush
-    fill(0, 102, 0);
-    ellipse(315, 330, 60, 60);
+    rect((float) (width/7.27), (float) (height/1.48), width/20, height/4);
 
     // Bush
     fill(0, 102, 0);
-    ellipse(340, 350, 60, 60);
+    ellipse((float) (width/1.27), (float) (height/1.21), (float) (width/6.66), (float) (height/6.66));
 
     // Bush
     fill(0, 102, 0);
-    ellipse(300, 350, 60, 60);
+    ellipse((float) (width/1.18), (float) (height/1.14), (float) (width/6.66), (float) (height/6.66));
 
-
-
-    
-
-  
-
+    // Bush
+    fill(0, 102, 0);
+    ellipse((float) (width/1.33), (float) (height/1.14), (float) (width/6.66), (float) (height/6.66));
   }
-
-
-
-}
   
-
+  
+}
